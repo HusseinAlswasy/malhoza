@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:malhoza/Widget/add_modal_progress_sheet.dart';
 import 'package:malhoza/Widget/note_view_body.dart';
 
 class NoteView extends StatelessWidget {
@@ -10,6 +11,17 @@ class NoteView extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: NoteViewBody(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return AddModalProgressSheet();
+            },
+          );
+        },
+        child: Icon(Icons.add, size: 30),
       ),
     );
   }
