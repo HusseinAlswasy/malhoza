@@ -12,10 +12,7 @@ class NoteApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        fontFamily: 'Edu Australia VIC WA NT Hand',
-      ),
+      theme: ThemeData(brightness: Brightness.dark),
       home: NoteView(),
     );
   }
