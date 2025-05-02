@@ -76,7 +76,7 @@ flutter:
   fonts:
     - family: Edu Australia VIC WA NT Hand
       fonts:
-        - asset: assets/font/EduAUVICWANTGuides-VariableFont_wght.ttf
+        - asset: assets/font/Cairo-VariableFont_slnt,wght.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

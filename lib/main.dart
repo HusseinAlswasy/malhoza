@@ -14,7 +14,7 @@ class NoteApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        fontFamily: 'Edu Australia VIC WA NT Hand',
+        fontFamily: 'Pacifico',
       ),
       home: NoteView(),
     );
