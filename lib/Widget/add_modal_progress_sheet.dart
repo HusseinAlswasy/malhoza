@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:malhoza/Widget/CustomeButton.dart';
 import 'package:malhoza/Widget/custome_text_feild.dart';
 
 class AddModalProgressSheet extends StatelessWidget {
@@ -15,15 +16,7 @@ class AddModalProgressSheet extends StatelessWidget {
           SizedBox(height: 10,),
           CustomeTextFeild(text: 'Add Title',lines: 5,),
           SizedBox(height: 30,),
-          Container(
-            height: 55,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Colors.deepPurple,
-            ),
-            child: Center(child: Text('ADD',style: TextStyle(color: Colors.white,fontSize: 20,),)),
-          ),
+          Customebutton(),
         ],
       ),
     );
