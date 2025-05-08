@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:malhoza/Screen/note_view.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
-  runApp(const NoteApp());
+void main() async{
+  await Hive.initFlutter();
+  await Hive.openBox('note box');
+  runApp(const NoteApp());          // Local Database -> Hive
 }
 
 class NoteApp extends StatelessWidget {

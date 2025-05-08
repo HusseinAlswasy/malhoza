@@ -12,17 +12,19 @@ class EditView extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Column(
-          children: [
-            SizedBox(height: 50,),
-            NoteAppbar(text: 'Edit',icon: Icons.edit,),
-            SizedBox(height: 20,),
-            CustomeTextFeild(text: 'Edit Note'),
-            SizedBox(height: 10,),
-            CustomeTextFeild(text: 'Edit Title',lines: 5,),
-            SizedBox(height: 300,),
-            Customebutton(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 50,),
+              NoteAppbar(text: 'Edit',icon: Icons.edit,),
+              SizedBox(height: 20,),
+              CustomeTextFeild(text: 'Edit Note'),
+              SizedBox(height: 10,),
+              CustomeTextFeild(text: 'Edit Title',lines: 5,),
+              SizedBox(height: 300,),
+              Customebutton(),
+            ],
+          ),
         ),
       ),
     );
