@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:malhoza/Widget/note_appBar.dart';
 import 'package:malhoza/Widget/note_list_view_item.dart';
+import 'package:malhoza/cubit/get_note_cubit/get_note_cubit.dart';
 
-class NoteViewBody extends StatelessWidget {
+class NoteViewBody extends StatefulWidget {
   const NoteViewBody({super.key});
 
+  @override
+  State<NoteViewBody> createState() => _NoteViewBodyState();
+}
+
+
+class _NoteViewBodyState extends State<NoteViewBody> {
+  @override
+  void initState() {
+    BlocProvider.of<GetNoteCubit>(context).GetAllNote();
+  }
   @override
   Widget build(BuildContext context) {
     return Column(

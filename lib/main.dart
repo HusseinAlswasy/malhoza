@@ -7,8 +7,8 @@ import 'package:malhoza/model/note_model.dart';
 
 void main() async{
   await Hive.initFlutter();
+   Hive.registerAdapter(NoteModelAdapter());
   await Hive.openBox<NoteModel>('note box');
-  Hive.registerAdapter(NoteModelAdapter());
   runApp(const NoteApp());          // Local Database -> Hive
 }
 
@@ -17,18 +17,13 @@ class NoteApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context)=>AddNoteCubit()),
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          brightness: Brightness.dark,
-          fontFamily: 'Pacifico',
-        ),
-        home: NoteView(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'Pacifico',
       ),
+      home: NoteView(),
     );
   }
 }
